@@ -1,6 +1,5 @@
 # Datos públicos del Ministerio de Justicia de España
-
-[minimalistic_icon_logo.webm](https://github.com/user-attachments/assets/2fbac6e7-479e-45d0-b409-ef449c33d3af)
+![Datos públicos sobre la Justicia Española](https://github.com/user-attachments/assets/cab172b9-2d26-4141-a82f-e6011008cc1f)
 
 
 ## Descripción del Proyecto
