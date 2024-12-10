@@ -1,5 +1,8 @@
 # Datos públicos del Ministerio de Justicia de España
 
+[minimalistic_icon_logo.webm](https://github.com/user-attachments/assets/2fbac6e7-479e-45d0-b409-ef449c33d3af)
+
+
 ## Descripción del Proyecto
 
 Este proyecto tiene como objetivo facilitar la recopilación de información pública proporcionada por el Ministerio de Justicia o el Consejo General del Poder Judicial, por ejemplo:
