@@ -12,6 +12,8 @@ El proyecto incluye scripts en Python que automatizan la recolección de estos d
 
 Con este repositorio, se busca centralizar y organizar la información para análisis o uso en otras aplicaciones.
 
+En caso de usar el código fuente o los datos del repositorio en cualquier otro proyecto, se requiere citar la autoría.
+
 ## Ficheros JSON con datos actualizados:
 1. [Listado de registros civiles existentes][1].
 
