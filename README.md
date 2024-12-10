@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto tiene como objetivo facilitar la recopilación de información pública proporcionada por el Ministerio de Justicia, como:
+Este proyecto tiene como objetivo facilitar la recopilación de información pública proporcionada por el Ministerio de Justicia o el Consejo General del Poder Judicial, por ejemplo:
 
 1. [Listado de registros civiles existentes][1].
 2. [Información sobre juzgados y sus respectivas ubicaciones][2].
