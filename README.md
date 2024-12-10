@@ -13,4 +13,4 @@ El proyecto incluye scripts en Python que automatizan la recolección de estos d
 Con este repositorio, se busca centralizar y organizar la información para análisis o uso en otras aplicaciones.
 
 Ficheros JSON con datos actualizados:
-[Datos-RegistroCivil]: (https://github.com/pedroj0s/Datos-Publicos-Ministerio-Justicia/blob/4f1778133e2c22fc798c88ea96ab56088177768d/capturarRegistros.py)
+[Datos-RegistroCivil]: <https://github.com/pedroj0s/Datos-Publicos-Ministerio-Justicia/blob/229f268c3dbad00e66c473e06c5078b666015d0d/data/registros-civiles-datos-capturados.json> "Datos de los Registros Civiles existentes."
