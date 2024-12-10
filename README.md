@@ -6,8 +6,8 @@
 
 Este proyecto tiene como objetivo facilitar la recopilación de información pública proporcionada por el Ministerio de Justicia o el Consejo General del Poder Judicial, por ejemplo:
 
-1. [Listado de registros civiles existentes][1].
-2. [Información sobre juzgados y sus respectivas ubicaciones][2].
+1. [x] [Listado de registros civiles existentes][1].
+2. [x] [Información sobre juzgados y sus respectivas ubicaciones][2].
 3. Jueces asignados a cada juzgado.
 
 El proyecto incluye scripts en Python que automatizan la recolección de estos datos a través de APIs públicas, scraping web (cuando sea permitido), o el procesamiento de archivos descargables proporcionados por el Ministerio de Justicia.
