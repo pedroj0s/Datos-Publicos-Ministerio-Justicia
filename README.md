@@ -6,7 +6,7 @@ Este proyecto tiene como objetivo facilitar la recopilación de información pú
 
 1. [Listado de registros civiles existentes][1].
 2. Información sobre juzgados y sus respectivas ubicaciones.
-3. Detalles de los jueces asignados a cada juzgado.
+3. Jueces asignados a cada juzgado.
 
 El proyecto incluye scripts en Python que automatizan la recolección de estos datos a través de APIs públicas, scraping web (cuando sea permitido), o el procesamiento de archivos descargables proporcionados por el Ministerio de Justicia.
 
