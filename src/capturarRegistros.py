@@ -89,7 +89,7 @@ def extractDatosRegistro() -> dict:
 
   with open(DATA_FILENAME, 'w') as f:
     json.dump(data, f);
-  if(len(errores.keys)>0):
+  if errores:
     with open(ERROR_FILENAME, 'w') as f:
       json.dump(errores,f);
   return data;
