@@ -1,4 +1,4 @@
-# Datos públicos del Ministerio de Justicia de España
+# Datos públicos del Ministerio de Justicia de España y del Consejo General del Poder Judicial
 
 <img src="https://github.com/user-attachments/assets/cab172b9-2d26-4141-a82f-e6011008cc1f" alt="Datos públicos sobre la Justicia Española" width="300">
 
@@ -20,7 +20,7 @@ Con este repositorio, se busca centralizar y organizar la información para aná
 
 En caso de usar el código fuente o los datos del repositorio en cualquier otro proyecto, **se requiere citar la autoría**.
 
-## Ficheros JSON con datos actualizados (10/12/2024):
+## Ficheros JSON con datos actualizados (11/12/2024):
 1. [Listado de registros civiles existentes][1].
 2. [Información sobre juzgados, sus respectivas ubicaciones, información de contacto e información sobre los titulares][2].
 
