@@ -3,8 +3,9 @@ import os.path;
 from selenium import webdriver;
 from selenium.webdriver.common.by import By;
 from selenium.webdriver.common.keys import Keys;
-
+translation = str.maketrans('áéíóú ','aeiou-');
 browser = webdriver.Firefox();
+os.chdir('.\\data');
 #browser.get('http://yahoo.com');
 #assert 'Yahoo' in browser.title;
 
@@ -18,7 +19,7 @@ browser = webdriver.Firefox();
 DATA_FILENAME = 'registros-civiles-datos-capturados.json';
 ERROR_FILENAME = 'registros-civiles-errores-captura.json';
 
-def extractDatosRegistro() -> dict:
+def getDatosRegistro() -> dict:
   data = {};
   errores = {};
 
@@ -66,11 +67,11 @@ def extractDatosRegistro() -> dict:
     otraData = marco.find_elements(By.XPATH, '//*[@class="listado_05"]/li');
     for od in otraData:
       strongData = od.find_element(By.TAG_NAME, 'strong').text;
-      info[strongData] = od.text.replace(strongData, '');
+      info[strongData.lower().translate(translation).replace(':','')] = od.text.replace(strongData, '');
     if len(marco.find_elements(By.XPATH, '//*[@class="cuerpo"]/ul/ul/li'))>0:
       otraData = marco.find_element(By.XPATH, '//*[@class="cuerpo"]/ul/ul/li') ;
       strongData = otraData.find_element(By.TAG_NAME, 'strong').text;
-      info[strongData] = otraData.text.replace(strongData, '');
+      info[strongData.lower().translate(translation).replace(':','')] = otraData.text.replace(strongData, '');
     
 
   getListadoProvincias(data);
@@ -96,8 +97,10 @@ def extractDatosRegistro() -> dict:
 
 def getData() -> dict:
   if os.path.exists(DATA_FILENAME):
-    with open(DATA_FILENAME, 'r') as jsonfile:      
+    with open(DATA_FILENAME, 'r', encoding='utf8') as jsonfile:      
       return json.load(jsonfile);
-  return extractDatosRegistro();
+  return getDatosRegistro();
 
-print(getData());
+data=getData();
+with open(DATA_FILENAME, 'w') as f:
+  json.dump(data, f, indent=1);
