@@ -110,5 +110,5 @@ Cada objeto dentro de `provincias` tiene los siguientes campos:
 }
 ```
    
-[1]: <https://github.com/pedroj0s/Datos-Publicos-Ministerio-Justicia/blob/229f268c3dbad00e66c473e06c5078b666015d0d/data/registros-civiles-datos-capturados.json> "Datos de los Registros Civiles existentes."
-[2]: <https://github.com/pedroj0s/Datos-Publicos-Ministerio-Justicia/blob/2587d15dd1e924f08c939644d3b9e7f79f31adc2/data/juzgados-cpgj-datos-capturados.json> "Datos de juzgados españoles obtenidos desde el CGPJ."
+[1]: <./data/registros-civiles-datos-capturados.json> "Datos de los Registros Civiles existentes."
+[2]: <./data/juzgados-cpgj-datos-capturados.json> "Datos de juzgados españoles obtenidos desde el CGPJ."
