@@ -1,5 +1,6 @@
 import json;
 import os.path;
+from datetime import datetime
 from selenium import webdriver;
 from selenium.webdriver.common.by import By;
 from selenium.webdriver.common.keys import Keys;
@@ -16,6 +17,7 @@ os.chdir('.\\data');
 
 #browser.implicitly_wait(100);
 #browser.quit();
+HISTORICAL_DATA_FILENAME = lambda filename : os.path.join('.', 'historical', f'{datetime.now():%Y%m%d}-{filename}');
 DATA_FILENAME = 'registros-civiles-datos-capturados.json';
 ERROR_FILENAME = 'registros-civiles-errores-captura.json';
 
@@ -95,12 +97,14 @@ def getDatosRegistro() -> dict:
       json.dump(errores,f);
   return data;
 
-def getData() -> dict:
-  if os.path.exists(DATA_FILENAME):
+def getData(force: bool = False) -> dict:
+  if not force and os.path.exists(DATA_FILENAME):
     with open(DATA_FILENAME, 'r', encoding='utf8') as jsonfile:      
       return json.load(jsonfile);
+  elif os.path.exists(DATA_FILENAME):
+    os.rename(DATA_FILENAME, HISTORICAL_DATA_FILENAME(DATA_FILENAME));
   return getDatosRegistro();
 
-data=getData();
+data=getData(True);
 with open(DATA_FILENAME, 'w') as f:
   json.dump(data, f, indent=1);

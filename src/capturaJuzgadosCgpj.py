@@ -1,4 +1,5 @@
 import concurrent.futures;
+from datetime import datetime
 import urllib.request;
 from queue import Queue
 import json;
@@ -10,6 +11,7 @@ import itertools;
 os.chdir('.\\data');
 translation = str.maketrans('áéíóú ', 'aeiou-');
 
+HISTORICAL_DATA_FILENAME = lambda filename : os.path.join('.', 'historical', f'{datetime.now():%Y%m%d}-{filename}');
 DATA_FILENAME =  'juzgados-cpgj-datos-capturados.json';
 ERROR_FILENAME = 'juzgados-cpgj-errores-captura.json';
 MAX_THREADS = 50;
@@ -164,6 +166,9 @@ def courtsDetailsExtractor(data):
     executor.submit(processCourtsData);
   print(datos);
   return datos;
+
+if os.path.exists(DATA_FILENAME):
+    os.rename(DATA_FILENAME, HISTORICAL_DATA_FILENAME(DATA_FILENAME));
 
 data=getData();
 juzgados = courtsDetailsExtractor(data);
